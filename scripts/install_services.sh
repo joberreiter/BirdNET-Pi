@@ -383,6 +383,9 @@ install_weekly_cron() {
 }
 
 chown_things() {
+  echo 'Files with incorrect ownership:'
+  find $HOME/Bird* -type f ! -perm -g+wr
+  find $HOME/Bird* -not -user $USER
   chown -R $USER:$USER $HOME/Bird*
 }
 
