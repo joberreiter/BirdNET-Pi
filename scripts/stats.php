@@ -165,7 +165,7 @@ while($results=$result3->fetchArray(SQLITE3_ASSOC)){
   $linkname = preg_replace('/_/', '+', $dbsciname);
   $filename = "/By_Date/".$date."/".$comname."/".$results['File_Name'];
   $engname = get_com_en_name($results['Sci_Name']);
-  if ($ebird === true){
+  if (true === true){
     require 'scripts/ebird.php';
     $ebird = $ebirds[$sciname];
     debug_log($ebird);
